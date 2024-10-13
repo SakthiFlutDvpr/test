@@ -10,8 +10,6 @@ class ApiCalls {
     http.Response response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
-      debugPrint(
-          'response data ==============================================================================');
       debugPrint(response.body);
       List data = jsonDecode(response.body);
 
