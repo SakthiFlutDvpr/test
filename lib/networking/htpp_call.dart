@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class ApiCalls {
-  static String url = 'https://jsonplaceholder.typicode.com/posts';
+  String url = 'https://jsonplaceholder.typicode.com/posts';
 
-  static Future getData() async {
+  Future getData() async {
     http.Response response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
